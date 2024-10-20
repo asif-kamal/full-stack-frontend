@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function RegisterUser() {
+  const [user, setUser] = useState({
+    name: "",
+    username: "",
+    email: "",
+  });
+
+  const { name, username, email } = user;
+  const onInputChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className="register-user-container">
       <div className="row">
@@ -15,6 +26,8 @@ export default function RegisterUser() {
               className="form-control"
               placeholder="Enter your full name"
               name="name"
+              value={name}
+              onChange={(e) => onInputChange(e)}
             />
           </div>
           <div className="mb-3">
@@ -26,6 +39,8 @@ export default function RegisterUser() {
               className="form-control"
               placeholder="Enter your username"
               name="username"
+              value={username}
+              onChange={(e) => onInputChange(e)}
             />
           </div>
           <div className="mb-3">
@@ -37,6 +52,8 @@ export default function RegisterUser() {
               className="form-control"
               placeholder="Enter your email address"
               name="email"
+              value={email}
+              onChange={(e) => onInputChange(e)}
             />
           </div>
           <button type="submit" className="btn btn-outline-primary">
