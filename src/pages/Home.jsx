@@ -26,13 +26,16 @@ export default function Home() {
           </thead>
           <tbody>
             {users.map((user) => (
-              <tr>
-                <th scope="row" key={user.id}>
-                  {user.id}
-                </th>
+              <tr key={user.id}>
+                <th scope="row">{user.id}</th>
                 <td>{user.username}</td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
+                <td>
+                  <button className="btn btn-primary mx-2">View</button>
+                  <button className="btn btn-outline-primary mx-2">Edit</button>
+                  <button className="btn btn-danger mx-2">Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>
