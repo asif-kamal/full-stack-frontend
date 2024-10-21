@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/register" element={<RegisterUser />} />
+          <Route exact path="/users" element={<Home />} />
+          <Route exact path="/users/register" element={<RegisterUser />} />
         </Routes>
       </BrowserRouter>
     </div>
