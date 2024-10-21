@@ -20,7 +20,7 @@ export default function NavBar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Link className="btn btn-outline-light" to="/register">
+          <Link className="btn btn-outline-light" to="/users/register">
             Register User
           </Link>
         </div>
