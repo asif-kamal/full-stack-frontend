@@ -18,7 +18,7 @@ export default function RegisterUser() {
   const onSubmit = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:8080/users/register", user);
-    navigate("/");
+    navigate("/users");
   };
   return (
     <div className="register-user-container">
@@ -68,7 +68,9 @@ export default function RegisterUser() {
             <button type="submit" className="btn btn-outline-primary">
               Submit
             </button>
-            <Link className="btn btn-outline-danger mx-2" to="/users">Cancel</Link>
+            <Link className="btn btn-outline-danger mx-2" to="/users">
+              Cancel
+            </Link>
           </form>
         </div>
       </div>
